@@ -1,0 +1,44 @@
+/* src/App.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.App {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+
+.chat-container {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 20px 0;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.message {
+  margin: 10px 0;
+}
+
+.message.professor {
+  text-align: right;
+  background-color: #d1e7dd;
+}
+
+.message.student {
+  text-align: left;
+  background-color: #cff4fc;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+}
+
+form input {
+  flex: 1;
+  margin-right: 10px;
+}
