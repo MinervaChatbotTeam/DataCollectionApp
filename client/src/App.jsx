@@ -5,7 +5,7 @@ import axios from 'axios';
 import { TailSpin } from 'react-loader-spinner';
 
 
-const baseURL = "https://datacollectionapp.onrender.com"//"http://localhost:3000"
+const baseURL = "http://localhost:3000"//"https://datacollectionapp.onrender.com"//
 
 const App = () => {
   const [topic, setTopic] = useState('');
@@ -94,7 +94,7 @@ const App = () => {
               
             </div>
             <form onSubmit={handleChatSubmit} className="flex flex-col mb-4">
-              <input
+              <textarea
                 type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
