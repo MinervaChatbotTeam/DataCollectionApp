@@ -19,6 +19,7 @@
     "express-cors": "^0.0.3",
     "express-session": "^1.18.0",
     "mongoose": "^8.4.3",
+    "openai": "^4.55.4",
     "uuid": "^10.0.0"
   }
 }
