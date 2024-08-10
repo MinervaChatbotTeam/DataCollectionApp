@@ -5,7 +5,7 @@ const OpenAI = require("openai")
 
 const axios = require('axios');
 
-const URL_Runpod = "https://api.runpod.ai/v2/vllm-veq69u9mgw33n9/openai/v1/chat/completions"
+const URL_Runpod = `https://api.runpod.ai/v2/${process.env.RUNPOD_ENDPOINT_ID}/openai/v1/chat/completions`
 
 
 exports.generateQuestion = async (topic) => {
