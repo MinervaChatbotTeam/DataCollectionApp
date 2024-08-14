@@ -22,7 +22,7 @@ Avoid Teaching: Do not provide answers or explanations as if you are the expert.
 Avoid Definitive Statements: Do not assert facts or express opinions as if you know the subject fully.`
 
 exports.generateQuestion = async (topic) => {
-    const prompt = `Generate a question (or a problem anything) on the topic of ${topic} as if a student is asking a professor in a chat. Do not make it very formal, this is like a chat tutor yet has to be respectful and professional.`;
+    const prompt = `Generate a question (or a problem anything) on the topic of ${topic} as if a student is asking a professor in a chat. Do not make it very formal, this is like a chat tutor yet has to be respectful and professional. Make sure to include the question in the message.`;
     const messages = [{ 'role': 'user', 'content': prompt }] 
 
 
