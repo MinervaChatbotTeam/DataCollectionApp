@@ -2,7 +2,8 @@ const mongoose = require('mongoose');
 
 const conversationSchema = new mongoose.Schema({
     messages: { type: Array, required: true },
-    createdAt: { type: Date, default: Date.now }
+    createdAt: { type: Date, default: Date.now },
+    email: {type:String, required: true}
 });
 
 const Conversation = mongoose.model('Conversation', conversationSchema);
