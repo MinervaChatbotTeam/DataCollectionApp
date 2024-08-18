@@ -3,7 +3,7 @@ import axios from 'axios';
 import { TailSpin } from 'react-loader-spinner';
 import backgroundImage from '../assets/bg.jpg'
 
-const baseURL = "http://localhost:3000"//"https://datacollectionapp.onrender.com"//
+const baseURL = "https://datacollectionapp.onrender.com"//"http://localhost:3000"//
 
 
 
