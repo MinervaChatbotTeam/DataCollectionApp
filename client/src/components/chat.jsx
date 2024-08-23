@@ -3,12 +3,11 @@ import axios from 'axios';
 import { TailSpin } from 'react-loader-spinner';
 import backgroundImage from '../assets/bg.jpg'
 
-const baseURL = "https://datacollectionapp.onrender.com"//"http://localhost:3000"//
 
 
 
 
-const Chat = () => {
+const Chat = ({baseURL}) => {
   const [topic, setTopic] = useState('');
   const [email, setEmail] = useState('');
   const [messages, setMessages] = useState([]);

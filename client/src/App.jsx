@@ -17,7 +17,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/chat" element={<Chat />} />
+        <Route path="/chat" element={<Chat baseURL={baseURL}/>} />
       </Routes>
     </Router>
   );

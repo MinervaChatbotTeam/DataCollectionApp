@@ -17,7 +17,7 @@ export default function Main() {
         <div className="text-center rounded-lg shadow-lg p-6 bg-gray-500 bg-opacity-90">
           <h1 className="text-5xl font-bold text-white mb-4">Welcome!</h1>
           <p className="text-lg text-white mb-6">
-            We're glad you're here to practice tutoring or to help with generating quality data!
+          We're glad you're here to practice tutoring and generate quality tutoring data!
           </p>
           <button onClick={()=>{ref.current?.scrollIntoView({behavior: 'smooth'})}} className="px-6 py-3 bg-white text-black font-semibold rounded-full shadow-lg hover:bg-gray-200 transition duration-300">
               Read Instructions
