@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { TailSpin } from 'react-loader-spinner';
 import backgroundImage from '../assets/bg.jpg'
@@ -13,7 +13,11 @@ const Chat = ({baseURL}) => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState('Done');
+  const [fact, setFact] = useState('');
 
+  useEffect(()=>{
+    axios.get("http://numbersapi.com/random/trivia").then((res)=>setFact(res.data))
+  },[])
 
   const handleTopicSubmit = async (e) => {
     setLoading("Loading");
@@ -77,6 +81,7 @@ const Chat = ({baseURL}) => {
               type="email"
               className="mb-4 p-2 border rounded-lg"
               required
+              autoComplete='email'
             />
             <input
               type="text"
@@ -134,7 +139,7 @@ const Chat = ({baseURL}) => {
               </button>
             </div>
           </div>
-        )}</>||<div className="m-auto my-20 w-40"><TailSpin
+        )}</>||<div><div className="m-auto my-20 w-40"><TailSpin
         height="140"
         width="140"
         color="#55ffff"
@@ -143,7 +148,11 @@ const Chat = ({baseURL}) => {
         wrapperStyle={{}}
         wrapperClass=""
         visible={true}
-    /></div>}
+    /></div>
+    <div className='text-white font-serif text-center'>
+      <strong>Loading... (Please wait a minute or two)</strong><br></br>
+        {fact}
+      </div></div>}
       </div>
     </div>
   );
